@@ -35,9 +35,6 @@ public:
 	UPROPERTY(EditAnywhere, Category="Grab Force")
 	TSubclassOf<AActor> RadialForceBP;
 	
-	UPhysicsHandleComponent* PhysicsHandle = nullptr;
-
-	void CheckPhysicsHandle();
 
 	AActor* SpawnedRadialForce = nullptr;
 

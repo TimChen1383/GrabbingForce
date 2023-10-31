@@ -22,8 +22,6 @@ void UGrabbingForce::BeginPlay()
 {
 	Super::BeginPlay();
 
-	//Check if physics handle exist. If not, print error
-	CheckPhysicsHandle();
 
 	// ...
 	
@@ -126,18 +124,8 @@ void UGrabbingForce::ReleaseObjects()
 	
 }
 
-void UGrabbingForce::CheckPhysicsHandle()
-{
-	PhysicsHandle = GetOwner()->FindComponentByClass<UPhysicsHandleComponent>();
-	if(PhysicsHandle)
-	{
-		//Physics Handle Found
-	}
-	else
-	{
-		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("No Physics Handle Component Found!"));
-	}
-}
+
+
 
 void UGrabbingForce::DestroyRadialForce()
 {
